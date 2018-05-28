@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="__STATIC__/css/bootstrap.min.css">
+</head>
+<body>
+
+    {include file="public/header" }
+  {include file="public/menu" }
+	<form class="form" action="{:url('klasscourse/save')}" method="post">
+ 
+  <div class="form-group">
+   
+    <select class="form-control" name="course_id">
+     {volist name="courses" id="vo"}
+	  <option value="{$vo.id}">{$vo.name}</option>
+     {/volist}
+	
+	</select>
+  </div>
+  <div class="form-group">
+ {volist name="klasss" id="vo"}
+    <label class="checkbox-inline">
+      <input type="checkbox" name="klass_id[]"  value="{$vo.id}"> {$vo.name}
+    </label>
+ {/volist}
+  </div>
+  <button type="submit" class="btn btn-default">Sign in</button>
+</form>
+
+ {include file="public/footer" }
+</body>
+</html>

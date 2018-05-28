@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="__STATIC__/css/bootstrap.min.css">
+</head>
+<body>
+   {include file='public/header'}
+
+		<form method="post" action="{:url('file/upload')}" enctype="multipart/form-data">
+			<div class="form-group">
+			    <label for="exampleInputFile">请选择文件</label>
+			    <input type="file" name="myfile" id="exampleInputFile">
+			    <p class="help-block">文件说明.</p>
+			</div>		
+			<button type="submit" class="btn btn-default">上传文件</button>				
+		</form>		
+   {include file="public/footer"}
+
+</body>
+</html>

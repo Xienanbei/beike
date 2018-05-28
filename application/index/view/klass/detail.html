@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="__STATIC__/css/bootstrap.min.css">
+</head>
+<body>
+  {include file="public/header" }
+  {include file="public/menu" }
+  <ul class="list-group">
+  <li class="list-group-item">{$klass.id}</li>
+  <li class="list-group-item">{$klass.name}</li>
+  <li class="list-group-item">{$klass.Teacher.name}</li>
+  <li class="list-group-item">{$klass.create_time}</li>
+ 
+</ul> 
+
+  {include file="public/footer" }
+</form>
+</body>
+</html>

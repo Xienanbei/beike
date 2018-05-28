@@ -1,0 +1,84 @@
+<p>我是导航条</p>
+
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">TP</a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        
+        <li><a href="{:url('index/index')}">首页</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">班级 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{:url('klass/index')}">班级列表</a></li>
+            <li><a href="{:url('klass/add')}">增加班级</a></li>
+           
+          </ul>
+        </li>
+         <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">教师 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{:url('teacher/index')}">教师列表</a></li>
+            <li><a href="{:url('teacher/add')}">增加教师</a></li>
+           
+          </ul>
+        </li>
+
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">学生 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{:url('student/index')}">学生列表</a></li>
+            <li><a href="{:url('student/add')}">增加学生</a></li>
+           
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">课程 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{:url('course/index')}">课程列表</a></li>
+            <li><a href="{:url('course/add')}">增加课程</a></li>
+           
+          </ul>
+        </li>
+                <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">选课 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{:url('klasscourse/index')}">选课列表</a></li>
+            <li><a href="{:url('klasscourse/add')}">增加选课</a></li>
+           
+          </ul>
+        </li>
+                <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">公告 <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="{:url('notice/index')}">公告列表</a></li>
+            <li><a href="{:url('notice/add')}">增加公告</a></li>
+           
+          </ul>
+        </li>
+      </ul>
+     
+      <ul class="nav navbar-nav navbar-right">
+         {if condition="$user"}
+             <li><a href="#"> 欢迎您{$user->username} </a></li>
+             <li><a href="{:url('login/logout')}">退出</a></li>              
+         {else/}
+              <li><a href="{:url('login/index')}">登录</a></li>
+              <li><a href="#"> 注册</a></li>
+         {/if}
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
